@@ -49,6 +49,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
@@ -73,11 +74,52 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="agregar_gerente_dpto.Designer.vb">
+      <DependentUpon>agregar_gerente_dpto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="agregar_gerente_dpto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="conexionBD.vb" />
+    <Compile Include="Departamento.vb" />
+    <Compile Include="Domicillio.vb" />
+    <Compile Include="Empleadp.vb" />
+    <Compile Include="Empresa.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insertar_departamento.Designer.vb">
+      <DependentUpon>insertar_departamento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="insertar_departamento.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insertar_empleado.Designer.vb">
+      <DependentUpon>insertar_empleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="insertar_empleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insertar_empresa.Designer.vb">
+      <DependentUpon>insertar_empresa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="insertar_empresa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insertar_gerente_nomina.Designer.vb">
+      <DependentUpon>insertar_gerente_nomina.vb</DependentUpon>
+    </Compile>
+    <Compile Include="insertar_gerente_nomina.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insertar_puesto.Designer.vb">
+      <DependentUpon>insertar_puesto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="insertar_puesto.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -95,13 +137,45 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Persona.vb" />
+    <Compile Include="Puesto.vb" />
+    <Compile Include="ventana_gerente_general.Designer.vb">
+      <DependentUpon>ventana_gerente_general.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ventana_gerente_general.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="agregar_gerente_dpto.resx">
+      <DependentUpon>agregar_gerente_dpto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insertar_departamento.resx">
+      <DependentUpon>insertar_departamento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insertar_empleado.resx">
+      <DependentUpon>insertar_empleado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insertar_empresa.resx">
+      <DependentUpon>insertar_empresa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insertar_gerente_nomina.resx">
+      <DependentUpon>insertar_gerente_nomina.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insertar_puesto.resx">
+      <DependentUpon>insertar_puesto.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ventana_gerente_general.resx">
+      <DependentUpon>ventana_gerente_general.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
