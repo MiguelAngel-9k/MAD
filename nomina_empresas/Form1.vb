@@ -46,5 +46,6 @@
         If Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
             MsgBox("Solo puede digitar numeros y sin espacios")
         End If
+
     End Sub
 End Class
