@@ -65,4 +65,120 @@
             Me.Close()
         End If
     End Sub
+
+    Private Sub txtCalleEmpresa_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCalleEmpresa.KeyPress
+        If Char.IsLetter(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsDigit(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = False
+        ElseIf e.KeyChar = ChrW(46) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+            MsgBox("Solo puede digitar letras, numeros y puntos decimales")
+        End If
+    End Sub
+
+    Private Sub txtColoniaEmpresa_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtColoniaEmpresa.KeyPress
+        If Char.IsLetter(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsDigit(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = False
+        ElseIf e.KeyChar = ChrW(46) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+            MsgBox("Solo puede digitar letras, numeros y puntos decimales")
+        End If
+    End Sub
+
+    Private Sub txtMunicipio_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtMunicipio.KeyPress
+        If Char.IsLetter(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsDigit(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = False
+        ElseIf e.KeyChar = ChrW(46) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+            MsgBox("Solo puede digitar letras, numeros y puntos decimales")
+        End If
+    End Sub
+
+    Private Sub txtCodigoPostalEmpresa_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCodigoPostalEmpresa.KeyPress
+        e.Handled = Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar)
+        If Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
+            MsgBox("Solo puede digitar numeros y sin espacios")
+        End If
+    End Sub
+
+    Private Sub txtRazonSocial_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtRazonSocial.KeyPress
+        If Char.IsLetter(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsDigit(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = False
+        ElseIf e.KeyChar = ChrW(46) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+            MsgBox("Solo puede digitar letras, numeros y puntos decimales")
+        End If
+    End Sub
+
+    Private Sub txtRegistroPatronal_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtRegistroPatronal.KeyPress
+        If Char.IsDigit(e.KeyChar) Then
+            e.Handled = False
+
+        ElseIf e.KeyChar = ChrW(8) Then 'BACKSPACE
+            e.Handled = False
+
+        ElseIf e.KeyChar >= ChrW(65) And e.KeyChar < ChrW(90) Then
+            e.Handled = False
+        ElseIf e.KeyChar >= ChrW(97) And e.KeyChar < ChrW(122) Then
+            e.Handled = True
+            MsgBox("Solo puede digitar letras mayusculas")
+        Else
+            e.Handled = True
+            MsgBox("Solo puede digitar letras mayusculas, numeros y sin espacios")
+        End If
+    End Sub
+
+    Private Sub txtRFCEmpresa_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtRFCEmpresa.KeyPress
+        If Char.IsDigit(e.KeyChar) Then
+            e.Handled = False
+
+        ElseIf e.KeyChar = ChrW(8) Then 'BACKSPACE
+            e.Handled = False
+
+        ElseIf e.KeyChar >= ChrW(65) And e.KeyChar < ChrW(90) Then
+            e.Handled = False
+        ElseIf e.KeyChar >= ChrW(97) And e.KeyChar < ChrW(122) Then
+            e.Handled = True
+            MsgBox("Solo puede digitar letras mayusculas")
+        Else
+            e.Handled = True
+            MsgBox("Solo puede digitar letras mayusculas, numeros y sin espacios")
+
+
+        End If
+    End Sub
+
+
+
 End Class
