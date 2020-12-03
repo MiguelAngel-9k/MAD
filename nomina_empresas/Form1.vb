@@ -20,7 +20,11 @@
                 End If
             Case 1
                 'llamamos al metodo de iniciar sesion como gerente de nomina
-                conn.iniciar_sesion(Convert.ToDecimal(txtNoEmpleado.Text), txtContrasenia.Text, 1)
+                If conn.iniciar_sesion(Convert.ToDecimal(txtNoEmpleado.Text), txtContrasenia.Text, 1) Then
+                    Me.Hide()
+                    Form2.ShowDialog()
+                End If
+
             Case 2
                 'llamamos al metodo de iniciar sesion como empleado
                 conn.iniciar_sesion(Convert.ToDecimal(txtNoEmpleado.Text), txtContrasenia.Text, 2)
