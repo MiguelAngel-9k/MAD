@@ -25,19 +25,23 @@ Partial Class ventana_gerente_general
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.EmpresaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InsertarEmpresaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GerenteDeNominaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InsertarDepartamentoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InsertarSoloGerenteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InsertarPuestoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InsertarEmpleadoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NominaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.InsertarNominaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.dtListaEmpresas = New System.Windows.Forms.DataGridView()
-        Me.GerenteDeNominaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.InsertarPersepcionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.InsertarDeduccionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.dtListaEmpresas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EmpresaToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EmpresaToolStripMenuItem, Me.NominaToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(784, 24)
@@ -57,6 +61,12 @@ Partial Class ventana_gerente_general
         Me.InsertarEmpresaToolStripMenuItem.Name = "InsertarEmpresaToolStripMenuItem"
         Me.InsertarEmpresaToolStripMenuItem.Size = New System.Drawing.Size(192, 22)
         Me.InsertarEmpresaToolStripMenuItem.Text = "Insertar Empresa"
+        '
+        'GerenteDeNominaToolStripMenuItem
+        '
+        Me.GerenteDeNominaToolStripMenuItem.Name = "GerenteDeNominaToolStripMenuItem"
+        Me.GerenteDeNominaToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
+        Me.GerenteDeNominaToolStripMenuItem.Text = "Gerente de Nomina"
         '
         'InsertarDepartamentoToolStripMenuItem
         '
@@ -83,6 +93,19 @@ Partial Class ventana_gerente_general
         Me.InsertarEmpleadoToolStripMenuItem.Size = New System.Drawing.Size(192, 22)
         Me.InsertarEmpleadoToolStripMenuItem.Text = "Insertar Empleado"
         '
+        'NominaToolStripMenuItem
+        '
+        Me.NominaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InsertarNominaToolStripMenuItem, Me.InsertarPersepcionToolStripMenuItem, Me.InsertarDeduccionToolStripMenuItem})
+        Me.NominaToolStripMenuItem.Name = "NominaToolStripMenuItem"
+        Me.NominaToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
+        Me.NominaToolStripMenuItem.Text = "Nomina"
+        '
+        'InsertarNominaToolStripMenuItem
+        '
+        Me.InsertarNominaToolStripMenuItem.Name = "InsertarNominaToolStripMenuItem"
+        Me.InsertarNominaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.InsertarNominaToolStripMenuItem.Text = "Insertar Nomina"
+        '
         'dtListaEmpresas
         '
         Me.dtListaEmpresas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -92,11 +115,17 @@ Partial Class ventana_gerente_general
         Me.dtListaEmpresas.Size = New System.Drawing.Size(756, 213)
         Me.dtListaEmpresas.TabIndex = 1
         '
-        'GerenteDeNominaToolStripMenuItem
+        'InsertarPersepcionToolStripMenuItem
         '
-        Me.GerenteDeNominaToolStripMenuItem.Name = "GerenteDeNominaToolStripMenuItem"
-        Me.GerenteDeNominaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.GerenteDeNominaToolStripMenuItem.Text = "Gerente de Nomina"
+        Me.InsertarPersepcionToolStripMenuItem.Name = "InsertarPersepcionToolStripMenuItem"
+        Me.InsertarPersepcionToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.InsertarPersepcionToolStripMenuItem.Text = "Insertar Persepcion"
+        '
+        'InsertarDeduccionToolStripMenuItem
+        '
+        Me.InsertarDeduccionToolStripMenuItem.Name = "InsertarDeduccionToolStripMenuItem"
+        Me.InsertarDeduccionToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.InsertarDeduccionToolStripMenuItem.Text = "Insertar Deduccion"
         '
         'ventana_gerente_general
         '
@@ -125,4 +154,8 @@ Partial Class ventana_gerente_general
     Friend WithEvents InsertarPuestoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents InsertarEmpleadoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents GerenteDeNominaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents NominaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents InsertarNominaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents InsertarPersepcionToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents InsertarDeduccionToolStripMenuItem As ToolStripMenuItem
 End Class

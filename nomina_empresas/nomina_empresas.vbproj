@@ -116,6 +116,12 @@
     <Compile Include="insertar_gerente_nomina.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="insertar_nomina.Designer.vb">
+      <DependentUpon>insertar_nomina.vb</DependentUpon>
+    </Compile>
+    <Compile Include="insertar_nomina.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="insertar_puesto.Designer.vb">
       <DependentUpon>insertar_puesto.vb</DependentUpon>
     </Compile>
@@ -164,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="insertar_gerente_nomina.resx">
       <DependentUpon>insertar_gerente_nomina.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insertar_nomina.resx">
+      <DependentUpon>insertar_nomina.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="insertar_puesto.resx">
       <DependentUpon>insertar_puesto.vb</DependentUpon>

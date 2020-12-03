@@ -527,4 +527,33 @@ Public Class conexionBD
         End Try
         Return estado
     End Function
+
+    Public Function insertar_nomina(empleado As Integer, Fpago As String) As Boolean
+        Dim estado As Boolean = False
+        Try
+            conectar()
+            Dim cmd As SqlCommand = New SqlCommand("sp_insertar_nomina", conexion)
+            cmd.CommandType = CommandType.StoredProcedure
+
+            Dim noEmpleado As SqlParameter = cmd.Parameters.Add("@empleado", SqlDbType.Int, 8)
+            noEmpleado.Value() = empleado
+
+            Dim FrecuenciaPago As SqlParameter = cmd.Parameters.Add("@frecuencia_pago", SqlDbType.VarChar, 30)
+            FrecuenciaPago.Value() = Fpago
+
+            Dim gerenteGeneral As SqlParameter = cmd.Parameters.Add("@gerente_general", SqlDbType.Int, 8)
+            gerenteGeneral.Value = 2
+
+            conexion.Open()
+            adaptador = New SqlDataAdapter()
+            adaptador.InsertCommand = cmd
+            cmd.ExecuteNonQuery()
+
+            estado = True
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            estado = False
+        End Try
+    End Function
 End Class
