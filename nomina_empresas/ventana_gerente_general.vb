@@ -40,4 +40,14 @@
         Me.Enabled = False
         insertar_gerente_nomina.Show()
     End Sub
+
+    Private Sub InsertarNominaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InsertarNominaToolStripMenuItem.Click
+        Me.Enabled = False
+        insertar_nomina.ShowDialog()
+
+    End Sub
+
+    Private Sub ventana_gerente_general_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        End
+    End Sub
 End Class

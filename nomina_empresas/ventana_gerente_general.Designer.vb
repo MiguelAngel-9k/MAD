@@ -30,9 +30,11 @@ Partial Class ventana_gerente_general
         Me.InsertarSoloGerenteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InsertarPuestoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InsertarEmpleadoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.dtListaEmpresas = New System.Windows.Forms.DataGridView()
         Me.NominaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InsertarNominaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.dtListaEmpresas = New System.Windows.Forms.DataGridView()
+        Me.InsertarPersepcionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.InsertarDeduccionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.dtListaEmpresas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -91,18 +93,9 @@ Partial Class ventana_gerente_general
         Me.InsertarEmpleadoToolStripMenuItem.Size = New System.Drawing.Size(192, 22)
         Me.InsertarEmpleadoToolStripMenuItem.Text = "Insertar Empleado"
         '
-        'dtListaEmpresas
-        '
-        Me.dtListaEmpresas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dtListaEmpresas.GridColor = System.Drawing.SystemColors.ButtonFace
-        Me.dtListaEmpresas.Location = New System.Drawing.Point(12, 103)
-        Me.dtListaEmpresas.Name = "dtListaEmpresas"
-        Me.dtListaEmpresas.Size = New System.Drawing.Size(756, 213)
-        Me.dtListaEmpresas.TabIndex = 1
-        '
         'NominaToolStripMenuItem
         '
-        Me.NominaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InsertarNominaToolStripMenuItem})
+        Me.NominaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InsertarNominaToolStripMenuItem, Me.InsertarPersepcionToolStripMenuItem, Me.InsertarDeduccionToolStripMenuItem})
         Me.NominaToolStripMenuItem.Name = "NominaToolStripMenuItem"
         Me.NominaToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
         Me.NominaToolStripMenuItem.Text = "Nomina"
@@ -112,6 +105,27 @@ Partial Class ventana_gerente_general
         Me.InsertarNominaToolStripMenuItem.Name = "InsertarNominaToolStripMenuItem"
         Me.InsertarNominaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.InsertarNominaToolStripMenuItem.Text = "Insertar Nomina"
+        '
+        'dtListaEmpresas
+        '
+        Me.dtListaEmpresas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dtListaEmpresas.GridColor = System.Drawing.SystemColors.ButtonFace
+        Me.dtListaEmpresas.Location = New System.Drawing.Point(12, 103)
+        Me.dtListaEmpresas.Name = "dtListaEmpresas"
+        Me.dtListaEmpresas.Size = New System.Drawing.Size(756, 213)
+        Me.dtListaEmpresas.TabIndex = 1
+        '
+        'InsertarPersepcionToolStripMenuItem
+        '
+        Me.InsertarPersepcionToolStripMenuItem.Name = "InsertarPersepcionToolStripMenuItem"
+        Me.InsertarPersepcionToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.InsertarPersepcionToolStripMenuItem.Text = "Insertar Persepcion"
+        '
+        'InsertarDeduccionToolStripMenuItem
+        '
+        Me.InsertarDeduccionToolStripMenuItem.Name = "InsertarDeduccionToolStripMenuItem"
+        Me.InsertarDeduccionToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.InsertarDeduccionToolStripMenuItem.Text = "Insertar Deduccion"
         '
         'ventana_gerente_general
         '
@@ -142,4 +156,6 @@ Partial Class ventana_gerente_general
     Friend WithEvents GerenteDeNominaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents NominaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents InsertarNominaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents InsertarPersepcionToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents InsertarDeduccionToolStripMenuItem As ToolStripMenuItem
 End Class
